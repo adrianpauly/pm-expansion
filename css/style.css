@@ -1,0 +1,414 @@
+body, h1, h2, h3, h4, h5 {
+	font-family: 'Roboto Slab';
+}
+
+video::-internal-media-controls-download-button {
+    display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+
+.outer-frame {
+	background: #e6e7e1;
+	border: 1px solid #ccc;
+	padding: 2px;
+}
+
+.inner-frame {
+	background: #f5f6f1;
+	padding: 0px 2px 2px;
+	border: 1px solid #ccc;
+	overflow: auto;
+	min-height: 800px;
+}
+
+.flex-video {
+	background: #000;
+}
+
+h1.frame-head {
+	background: #d51968;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px;
+	font-size: 20px;
+	margin-bottom: 20px;
+	
+}
+
+h1.frame-head span {
+	display: inline-block;
+	background: #6d6f7c;
+	padding: 5px;
+	border-radius: 20px;
+	height: 20px;
+	width: 20px;
+	margin-right: 3px;
+	line-height: 0.3;
+	text-align: center;
+	margin-left: 10px;
+	position: relative;
+	top: -2px;
+}
+
+h1.frame-head .banner {
+	width: 110px;
+	height: 51px;
+}
+
+h1.frame-head .link-box .phimu-logo {
+	width: 43px;
+	box-shadow: 0px 2px 6px #000;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+h1.frame-head .link-box .gin-logo {
+	width: 45px;
+	box-shadow: 0px 2px 6px #000;
+    border-radius: 50%;
+}
+
+h1.frame-head .link-box {
+	float: right;
+}
+
+.link-btn {
+     background:none!important;
+     border:none; 
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     width: 82px;
+     color: black;
+     margin-left: 10px;
+}
+
+.jspContainer, .customSelect.select-open .selectList, .customSelect dd {
+	background: #b7376d;
+	color: #fff;
+}
+
+dd.itm-0 {
+	display: none;
+}
+
+
+.customSelect {
+	width: 300px !important;
+	margin-top: 5px;
+}
+
+.customSelect .selectList dl {
+	width: 298px !important;
+}
+
+.video-frame, .tree-frame {
+	padding: 20px 20px 3px;
+	margin-top: 20px;
+	border-radius: 12px;
+}
+
+.video-frame {
+	background: #d51968;
+	text-align: center;
+}
+
+.video-frame h2 {
+	color: #fff;
+	margin-top: 10px;
+	font-size: 29px;
+	letter-spacing: 3px;
+}
+
+.tree-frame {
+	background: #fff;
+	overflow: auto;
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	clear: both;
+	font-family: 'Roboto Slab';
+}
+
+.tree-frame .tutoring-tab {
+	background: #5D5D5D;
+}
+
+div.tab {
+	padding: 20px; 
+	border-radius: 8px;
+	text-align: center;
+	float: left;
+	background: #ccc;
+	color: #fff;
+	width: 49%;
+	position: relative;
+	margin-bottom: 30px;
+	cursor: pointer;
+	font-weight: 300;
+}
+
+div.tab:first-child {
+	margin-right: 2%;
+}
+
+div.active-tab {
+	background: #d51968;
+}
+
+div.tree {
+	border-top: 1px solid #eee;
+	margin-top: 20px;
+	clear: both;
+}
+
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-top: 14px solid #ecb3c8;
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	margin-left: -14px;
+}
+
+ul.folder-items {
+	list-style-type: none;
+}
+
+ul.folder-items li {
+	margin: 8px 0;
+	font-size: 14px;
+}
+
+ul.folder-items li i {
+	color: #ecb3c8;
+	margin-right: 3px;
+}
+
+.fa-folder {
+	margin-right: 5px;
+}
+
+
+/* ADMIN */
+
+.side-nav {
+	background: #222;
+	font-family: 'Open Sans';
+	height: 100%;
+	width: 200px;
+	position: fixed;
+	overflow-y: scroll;
+	top: 0;
+	left: 0;
+	min-height: 100%;
+	border-right: 1px solid #ddd;
+	z-index: 9999;
+}
+
+.side-nav h1 {
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	font-weight: 300;
+	margin-bottom: 20px;
+	margin-top: 12px;
+}
+
+.side-nav li.active > a:first-child:not(.button) {
+	font-weight: bold;
+}
+
+.side-nav li {
+	border-bottom: 1px solid #333;
+	font-weight: bold;
+}
+
+.admin-content {
+	margin: 20px 20px 0 210px;
+}
+
+.admin-content h3 {
+	font-style: italic;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+ul.current-subjects {
+	list-style-type: none;
+}
+
+ul.current-subjects li {
+	margin: 12px 0;
+	font-size: 12px;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 12px;
+}
+
+ul.current-subjects li:last-child {
+	border-bottom: none;
+}
+
+li.just-added {
+	font-weight: bold;
+}
+
+div.widget {
+	background: #f5f5f5;
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 80px;
+}
+
+h3.widget-head {
+	text-align: center;
+	background: #222;
+	color: #fff;
+	margin-top: 0;
+	text-transform: none;
+	font-size: 16px;
+	padding: 8px 0;
+	font-style: normal;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+
+a.button {
+	font-family: 'Open Sans';
+	display: block;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.alert-box {
+	position: fixed;
+	bottom: -20px;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	display: none;
+}
+
+a#go-tms {
+	color: #fff;
+	background-color: #ecb3c8;
+	padding: 10px;
+	width: 400px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	border-radius: 8px;
+}
+
+#tmsModal {
+	border: 5px solid #ecb3c8;
+	border-radius: 18px;
+	max-width: 750px;
+}
+
+.reveal-modal-bg {
+	position: fixed;
+}
+
+.customSelect dd {
+	font-size: 14px;
+}
+
+.selectBox-dropdown {
+	display: block !important;
+	margin: 0 auto !important;
+	width: 280px !important;
+	background: #d51968 !important;
+	color: white !important;
+	border-color: #BBB !important;
+}
+
+.selectBox-dropdown .selectBox-arrow {
+	border-color: #BBB !important;
+}
+
+.selectBox-dropdown-menu {
+	background: #d51968 !important;
+	max-height: 50% !important;
+}
+
+.selectBox-options li a {
+	color: #fff !important;
+}
+
+.selectBox-options li a:hover {
+	color: #b7376d !important;
+}
+
+.selectBox-options li:first-child a {
+	display: none !important;
+}
+
+/*TREE STYLES*/
+
+.hidden {
+	display: none;
+}
+
+#tree1 {
+	margin-top: 30px;
+}
+
+.folder-item {
+	font-size: 20px !important;
+}
+
+.fa-folder, .fa-folder-open {
+	font-size: 20px !important;
+}
+
+ul.jqtree-tree li.jqtree-selected > .jqtree-element, ul.jqtree-tree li.jqtree-selected > .jqtree-element:hover {
+	background: none;
+}
+
+
+.fa-play-circle-o, .fa-file-text-o {
+	color: #d51968;
+	position: relative;
+	left: 27px;
+	top: 1px;
+	margin-right: 27px;
+}
+
+.intro-vid {
+	left: 0;
+	margin-right: 0;
+}
+
+.fa-folder, .fa-folder-open {
+	color: #d51968;
+}
+
+.jqtree-tree .jqtree-title {
+	font-size: 18px;
+	margin-left: 10px;
+}
+
+.selectBox-dropdown {
+	filter: none;
+}
+
+.selectBox-dropdown .selectBox-label {
+	width: 100% !important;
+	background: #d51968;
+}
+
+.help {
+	padding: 12px;
+    text-align: center;
+}
