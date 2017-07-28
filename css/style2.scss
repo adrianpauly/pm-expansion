@@ -1,0 +1,236 @@
+// Variables
+
+$black: #222;
+$dark-gray: #444;
+$gray: #888;
+$light-gray: #e3e3e3;
+$lightest-gray: #f2f2f2;
+
+
+
+// Layout
+
+.container {
+  padding: 20px;
+  min-height: 90vh;
+}
+
+// Previous code
+
+video {
+  &::-internal-media-controls-download-button {
+    display: none;
+  }
+  &::-webkit-media-controls-enclosure {
+    overflow: hidden;
+  }
+  &::-webkit-media-controls-panel {
+    width: calc(100% + 30px);
+    /* Adjust as needed */
+  }
+}
+
+
+// SelectBox dropdowns
+
+.selectbox-container {
+  width: 90%;
+}
+
+.selectBox {
+  border-radius: 4px;
+  background: rgb( 7, 161, 205 );
+  z-index: 104;
+  color : #fff;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 17px -4px rgba($gray,0.6);
+  border: none;
+  max-width: 100%;
+  &:hover, &:active, &:focus {
+    color: #fff;
+  }
+}
+.selectBox-arrow {
+  border-left: 0px !important;
+  color: #fff;
+  background: url(../img/drop_down_arrow.png) 50% center no-repeat !important;
+  background-size: 10px !important;
+}
+.selectBox-dropdown-menu {
+  margin-top: -30px;
+}
+.selectBox-label {
+  width: 315px;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: -8px;
+    padding: 2px 19px !important;
+}
+.selectBox-options {
+  li {
+    &:hover {
+      a {
+        background-color: $light-gray;
+      }
+    }
+  }
+}
+
+#pick-school {
+  margin-bottom: 20px;
+}
+
+.videos-label {
+  display: none;
+  background-color: rgb( 245, 247, 247 );
+  display: block;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 13.5px;
+  font-weight: bold;
+  span img {
+    width: 40px;
+  }
+  .collapse-link {
+    float: right;
+  }
+  .collapse-all { 
+    font-size : 14px;
+    color: #07a1cd;
+    text-transform: none;
+  }
+}
+
+.welcome {
+  margin: 40px 0 20px;
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  padding: 10px 0;
+  color: $dark-gray;
+  font-size: 1.6rem;
+  .subject-name {
+    color: $black;
+  }
+}
+
+.tree {
+  margin-top: 2px;
+  .folder-item {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+.tree-frame {
+  margin-top: 31px;
+}
+
+.flex-video {
+  border: solid 1px rgb(230, 230, 230);
+}
+
+.video-frame {
+  background-image: url(../img/se-placeholder.png);
+  background-size: cover;
+  border: 1px solid $light-gray;
+  margin-bottom: 20px;
+  h3 {
+    font-weight: 700;
+    font-size: 26px;
+  }
+}
+
+.flex-video {
+  padding-bottom: 53.25% !important;
+  margin: 0 !important;
+}
+
+.loading {
+  display: none;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  bottom: 40px;
+  left: 50%;
+  margin-left: -24px;
+}
+
+.video-player {
+  cursor: pointer;
+}
+#video-player {
+  width: 100%;
+}
+
+.video-title {
+  font-size: 1.4rem;
+}
+
+.fa-caret-down, .fa-caret-right {
+  margin-left: -6px;
+  margin-right: 10px;
+}
+
+.inner, .file {
+  margin-left: 10px;
+}
+
+ul.jqtree-tree {
+  li.jqtree_common {
+    padding: 9px 0 9px 9px;
+    font-size: 15px;
+    margin-bottom: 0px; 
+    img {
+      width: 20px;
+    } 
+    .file {
+      width: 13px;
+    }
+    li {
+      &:hover {
+        div {
+          background-color: $lightest-gray;
+        }
+      }     
+    }
+  }
+  li.jqtree-selected {
+    & > .jqtree-element {
+      &, &:hover {
+        background: $lightest-gray !important; 
+        font-weight: 700; 
+      }
+    }
+  }
+}
+
+
+#pick-subject {
+  max-width: 835px;
+  margin: 0 auto;
+  .school {
+    padding: 12px;
+  }
+}
+.school-name {
+  float: right;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+  line-height: 3.4;
+}
+
+.scroll-to-top {
+  display: none;
+  background-color: $light-gray;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: $dark-gray;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  padding:10px 15px;
+}
