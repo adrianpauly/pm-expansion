@@ -118,8 +118,7 @@ video {
 .tree {
   margin-top: 2px;
   .folder-item {
-    font-size: 12px;
-    font-weight: bold;
+    font-weight: 700;
   }
 }
 
@@ -134,7 +133,6 @@ video {
 .video-frame {
   background-image: url(../img/se-placeholder.png);
   background-size: cover;
-  border: 1px solid $light-gray;
   margin-bottom: 20px;
   h3 {
     font-weight: 700;
@@ -166,6 +164,7 @@ video {
 
 .video-title {
   font-size: 1.4rem;
+  margin-top: 10px;
 }
 
 .fa-caret-down, .fa-caret-right {
@@ -179,9 +178,11 @@ video {
 
 ul.jqtree-tree {
   li.jqtree_common {
-    padding: 9px 0 9px 9px;
     font-size: 15px;
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
+    div.jqtree_common {
+      padding: 9px 0 9px 9px;
+    }
     img {
       width: 20px;
     } 
@@ -199,7 +200,7 @@ ul.jqtree-tree {
   li.jqtree-selected {
     & > .jqtree-element {
       &, &:hover {
-        background: $lightest-gray !important; 
+        background: #fff !important; 
         font-weight: 700; 
       }
     }

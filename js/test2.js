@@ -1,15 +1,17 @@
 $(document).foundation();
 
 $(function() {
-    $('select').selectBox().change(function() {
+    $('select').selectBox().on('change', function() {
         var subj_id = $(this).val()
 
         $('#tree1').tree('destroy');
         if ($(this).attr('id') != "school") {
             $(".video-frame").hide();
         }
-        $(".info-row").removeClass("hidden");
-        $(".subject-name").text($(".selectbox :selected").text());
+        $('.video-player').empty();
+        $('.video-title').empty();        
+        $('.info-row').removeClass('hidden');
+        $('.subject-name').text($('.selectBox :selected').text());
 
         $.getJSON(
             'get-tree.php?subject_id=' + subj_id,
@@ -44,7 +46,7 @@ $(function() {
                         }
 
                         if (node.resource_type_id == 3) {
-                            $li.find('.jqtree-title').before('<img src="/css/file-icn.svg" class="file">');
+                            $li.find('.jqtree-title').before('<img src="/img/file-icn.svg" class="file">');
                             var the_title = node.name.replace(/_/g, " ").slice(0, -4);
                             $li.find('.jqtree-title').replaceWith('<span class="jqtree-title jqtree_common">' + the_title + '</span>');
                         }
@@ -75,7 +77,7 @@ $(function() {
             'tree.click',
             function(event) {
                 var node = event.node;
-                // click on Folder
+                // click on a folder
                 if (node.resource_type_id == 1) {
                     if (node.is_open) {
                         $('#tree1').tree('closeNode', node);
@@ -84,7 +86,7 @@ $(function() {
                     }
                 }
 
-                // Click on PDF
+                // Click on a PDF
                 if (node.resource_type_id == 3) {
                     if (typeof window.wistiaApi != "undefined") {
                         window.wistiaApi.pause();
@@ -96,7 +98,7 @@ $(function() {
                     window.open(node.url);
                 }
 
-                // Click on Video
+                // Click on a video link
                 if (node.resource_type_id == 4 || node.resource_type_id == 10) {
 
                     var url = node.url;
@@ -113,7 +115,11 @@ $(function() {
 
 
                     if (node.resource_type_id == 4) {
-                        var the_title = node.name.replace(/_/g, " ").slice(0, -4);
+                        // Check if title contains file extension
+                        var the_title = node.name.replace(/_/g, " ");
+                        if (the_title.substring((the_title.length - 4),(the_title.length - 3)) == '.') {
+                            the_title = the_title.substring(0,(the_title.length - 4));
+                        }
                     } else {
                         var the_title = node.name;
                     }
@@ -122,17 +128,20 @@ $(function() {
                         the_title = the_title.slice(1, the_title.length);
                     }
 
+                    // Wistia video
                     if (!studyedge_vid) {
                         $('div.flex-video .video-player').html('');
                         $('div.flex-video iframe').show();
                         $('div.flex-video iframe').attr('src', embed_code);
                         $('div.flex-video iframe').attr('data-vidID', node.id);
+                        window.wistiaApi.play();
+                    // Local video
                     } else {
                         $('div.flex-video iframe').hide();
-                        $('div.flex-video .video-player').html("<video id='video-player' controls><source src='" + embed_code + "' type='video/mp4'></video> ");
+                        $('.video-frame .video-player').html("<video id='video-player' controls autoplay><source src='" + embed_code + "' type='video/mp4'></video> ");                        
                     }
 
-                    $('h3#vid-title').text(the_title);
+                    $('.video-title').text(the_title);
 
                     if ($('.video-frame').hasClass('hidden')) {
                         $('.video-frame').removeClass('hidden');
@@ -141,7 +150,7 @@ $(function() {
                     $("video").bind("contextmenu", function() {
                         return false;
                     });
-                    $('html,body').scrollTop(110);
+                    $('html,body').scrollTop(0);
                 }
             }
         );

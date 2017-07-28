@@ -8,7 +8,7 @@ if($_POST){
   header('Location: ...');
 }
 
-if(isset($_GET["school"])) {
+if(isset($_GET['school'])) {
   $_SESSION['school'] = $_GET["school"];
 } 
 
@@ -103,29 +103,32 @@ while($row = mysqli_fetch_assoc($subjects_results)) {
           </div>
         </div>
 
-        <div class="video-frame">
-          <div class="flex-video widescreen">
-					  <iframe id="wistia" src="//fast.wistia.net/embed/iframe/yaiptxmv9a" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="800" height="450"></iframe>
-            <div class="video-player"></div>
-          </div>
-          <h3 class="video-title"></h3>
-        </div>
-
-        <div class="tree-frame">
-
-          <h3 class="welcome">Welcome to <span class="subject-name">Subject Name</span></h3>
-          <div class="tab active-tab videos-label">
-            <span><img src="/css/video-more-icn.svg">Videos &amp; More</span>
-            <div class="collapse-link">
-              <a class="collapse-all">Collapse all folders <span class="caret"></span></a>
-              <div class="arrow-down"></div>
+        <div class="row">
+          <div class="medium-12 columns">
+            
+            <div class="video-frame">
+              <div class="flex-video widescreen">
+                <iframe id="wistia" src="//fast.wistia.net/embed/iframe/yaiptxmv9a" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="800" height="450"></iframe>
+                <div class="video-player"></div>
+              </div>
+              <h3 class="video-title"></h3>
             </div>
-          </div>
 
-          <div class="tree">
-            <div id="tree1"></div>
-          </div>
+            <div class="tree-frame">
+              <h3 class="welcome">Welcome to <span class="subject-name">Subject Name</span></h3>
+              <div class="tab active-tab videos-label">
+                <span><img src="/css/video-more-icn.svg">Videos &amp; More</span>
+                <div class="collapse-link">
+                  <a class="collapse-all">Collapse all folders <span class="caret"></span></a>
+                  <div class="arrow-down"></div>
+                </div>
+              </div>
+              <div class="tree">
+                <div id="tree1"></div>
+              </div>
+            </div>
 
+          </div>
         </div>
 
       </div><!-- #pick-subject -->
